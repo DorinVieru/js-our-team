@@ -33,13 +33,20 @@ let dipendenti = [
     }
 ]
 
-console.log(dipendenti);
-
 
 // ----- MILESTONE 1 -----
-// STAMPO SU CONSOLE LE INFORMAZIONI DI OGNI MEMBRO DEL TEMA
-
+// STAMPO SU CONSOLE LE INFORMAZIONI DI OGNI MEMBRO DEL TEAM
+for (let i = 0; i <= 5; i++) {
+    console.log(dipendenti[i]);
+}
 
 
 // ----- MILESTONE 2 -----
 // STAMPO LE MEDISIME INFORMAZIONI DI OGNI MEMEBRO NEL DOM
+for (let i = 0; i <= 5; i++) {
+    document.getElementById("dipendenti").innerHTML += `<li class="list-group-item active">${dipendenti[i].name}</li>`
+
+    document.getElementById("dipendenti").innerHTML += `<li class="list-group-item">${dipendenti[i].role}</li>`
+
+    document.getElementById("dipendenti").innerHTML += `<li class="list-group-item">${dipendenti[i].image}</li>`
+}
